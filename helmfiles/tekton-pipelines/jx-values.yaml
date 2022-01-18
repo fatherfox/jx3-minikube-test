@@ -32,16 +32,20 @@ jxRequirements:
     provider: minikube
   environments:
   - key: dev
+    owner: fatherfox
+    repository: jx3-minikube-test
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: localhsot.nip.io
     kind: ingress
     namespaceSubDomain: -tekton-pipelines.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: fatherfox
   repository: bucketrepo
   secretStorage: local
   vault: {}
